@@ -68,12 +68,12 @@ Extracted structured attributes from `Product ID` and combined product/brand fie
 | **Product Brand** | `=CONCATENATE(D2," ", F2)` | Merged `Product Name` and `Brand Name` with a space separator |
 
 ---
-
-### 4. Number & Date Formatting
+ 4. Number & Date Formatting
 * **Price Column:** Formatted as Currency (`$#,##0.00`).
 * **Manufacturing Date Column:** Converted and formatted to `DD-MM-YYYY` using:
   ```excel
   =DATEVALUE(LEFT(A2,6)&"-2026")
+
 5. Conditional Formatting
 Applied visual cues to highlight pricing tiers and specific product categories:
 
@@ -90,7 +90,9 @@ Seven sequential Table.Distinct steps were applied in Power Query (table_product
 = Table.Distinct(#"Removed Duplicates3", {"Quantity"})
 = Table.Distinct(#"Removed Duplicates4", {"Category"})
 = Table.Distinct(#"Removed Duplicates5", {"Category (IMPUTED)"})
+
 📁 Repository Structure
+
 ├── Assignment_2_-_Full_Report___Dataset.pdf                    # Complete dataset & missing value strategy
 ├── Assignment_2_-_Data_Cleaning_and_Transformation.pdf         # Dataset record summary & audit log
 ├── Assignment_2_-_Complete_Data_Cleaning_Report.pdf            # Post-transformation dataset report
@@ -100,10 +102,13 @@ Seven sequential Table.Distinct steps were applied in Power Query (table_product
 ├── Conditional_Formatting_Report.pdf                           # Color scale & custom highlight rules
 ├── Product_Inventory_Data.pdf                                  # Final currency & date formatted dataset
 └── README.md                                                   # Project documentation
+
 🚀 Key Takeaways
+
 Data Integrity: Imputation strategies should align with domain context (e.g., category-level averages over global averages).
 Standardization: Consistent casing and typo resolution prevent downstream grouping errors in pivot tables and queries.
 Automation: Combining Excel formulas with Power Query M-scripts creates a repeatable, auditable data cleaning pipeline.
 
 🎯 Conclusion
+
 This project demonstrates how structured data cleaning and transformation workflows turn raw, inconsistent inventory records into reliable, analysis-ready datasets. By combining Excel formulas, Find & Replace standardization, conditional formatting, and Power Query M-script deduplication, the pipeline resolves missing values, eliminates formatting discrepancies, and ensures data integrity across all 34 product records. Moving forward, replacing static fallbacks and global mean imputations with context-aware lookups (such as category-based pricing and brand-to-category mapping) will further improve accuracy for downstream reporting and business intelligence.
