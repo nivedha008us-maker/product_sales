@@ -104,5 +104,6 @@ Seven sequential Table.Distinct steps were applied in Power Query (table_product
 Data Integrity: Imputation strategies should align with domain context (e.g., category-level averages over global averages).
 Standardization: Consistent casing and typo resolution prevent downstream grouping errors in pivot tables and queries.
 Automation: Combining Excel formulas with Power Query M-scripts creates a repeatable, auditable data cleaning pipeline.
+
 🎯 Conclusion
 This project demonstrates how structured data cleaning and transformation workflows turn raw, inconsistent inventory records into reliable, analysis-ready datasets. By combining Excel formulas, Find & Replace standardization, conditional formatting, and Power Query M-script deduplication, the pipeline resolves missing values, eliminates formatting discrepancies, and ensures data integrity across all 34 product records. Moving forward, replacing static fallbacks and global mean imputations with context-aware lookups (such as category-based pricing and brand-to-category mapping) will further improve accuracy for downstream reporting and business intelligence.
